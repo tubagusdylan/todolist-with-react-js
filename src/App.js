@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./style/background.css";
+import Header from "./components/Header";
+import InputToDo from "./components/InputToDo";
+import ListToDo from "./components/ListToDo";
 
 function App() {
+  const [todos, setTodos] = useState([]);
+
+  const eventCreateTodo = (todo) => {
+    setTodos(todos.concat(todo));
+  };
+
+  const eventEditTodo = (todo) => {
+    setTodos(todo);
+  };
+
+  const eventDeleteTodo = (todo) => {
+    setTodos(todo);
+  };
+
+  const eventDoneTodo = (todo) => {
+    setTodos(todo);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="background">
+      <div className="container">
+        <Header>TODO</Header>
+        <InputToDo createToDo={eventCreateTodo} dataToDo={todos} deleteToDo={eventDeleteTodo} eventEditTodo={eventEditTodo} eventDoneTodo={eventDoneTodo} />
+      </div>
     </div>
   );
 }
