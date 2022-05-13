@@ -31,7 +31,7 @@ const ListToDo = (props) => {
         return (
           <li key={todo.id}>
             <input type="checkbox" onChange={doneTodoHandler.bind(this, todo)} checked={todo.done} />
-            {todo.done ? <s>{todo.activity}</s> : <label>{todo.activity}</label>}
+            {todo.done ? <s style={{ opacity: 0.5 }}>{todo.activity}</s> : <label>{todo.activity}</label>}
             <button className="deleteButton" onClick={props.editToDo.bind(this, todo)}>
               Edit
             </button>
