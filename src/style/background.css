@@ -7,17 +7,24 @@
 .container {
   width: 580px;
   margin: auto;
-  border: 1px solid white;
   padding: 20px;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .input {
   display: inline-block;
-  width: 75%;
+  width: 200%;
   height: 1.7rem;
   border: none;
   border-radius: 5px;
   margin-top: 5px;
+  padding: 6px;
+  font-size: 16px;
 }
 
 .label-input {
@@ -26,24 +33,56 @@
 }
 
 li {
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
   list-style: none;
-  text-align: left;
+  padding: 10px;
+  background-color: white;
+  border-bottom: solid 1px grey;
+}
+
+.checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.listLabel {
+  font-size: 16px;
 }
 
 .button-1 {
   margin-left: 10px;
+  margin-top: 5px;
   border: none;
   height: 1.7rem;
   border-radius: 5px;
+  background-color: white;
+  padding: 6px;
+}
+
+.button-1:hover {
+  color: blue;
+  cursor: pointer;
 }
 
 .deleteButton {
   margin-left: 10px;
-  width: 10%;
   border: none;
   height: 1.2rem;
   border-radius: 5px;
+  background-color: transparent;
+}
+
+.deleteButton:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.icon {
+  font-size: 16px;
 }
 
 .message {
@@ -58,4 +97,8 @@ li {
 
 i {
   color: white;
+}
+
+.listContainer {
+  padding-inline-start: 0;
 }
